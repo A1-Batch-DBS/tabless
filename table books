@@ -10,3 +10,12 @@ publish_year numeric(4),
 publication varchar(30),
 edition varchar(3),
 constraint b_pk primary key(book_id));
+
+create table author(
+book_id varchar(3) references books,
+author varchar(25) not null);
+
+create table genre(
+book_id varchar(3) references books,
+genre varchar(15) not null check(genre in('dentistry','engineering','architecture','cooking and management','medicine','communication','commerce'))
+);
