@@ -1,0 +1,12 @@
+create table books(
+book_id  varchar(3),
+isbn numeric(13),
+title varchar(25) not null,
+no_of_copies numeric(3),
+shelf_no numeric(3),
+availability bool,
+price numeric(8,3),
+publish_year numeric(4),
+publication varchar(30),
+edition varchar(3),
+constraint b_pk primary key(book_id));
